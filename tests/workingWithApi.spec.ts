@@ -10,11 +10,6 @@ test.beforeEach(async ({ page }) => {
 	})
 
 	await page.goto('https://conduit.bondaracademy.com')
-	// await page.waitForTimeout(1000) // if mocking don't work, here or in the test
-	await page.getByText('Sign in').click()
-	await page.getByRole('textbox', { name: 'Email' }).fill('svet@test.com')
-	await page.getByRole('textbox', { name: 'Password' }).fill('12345678')
-	await page.getByRole('button', { name: 'Sign in' }).click()
 })
 
 test('has title', async ({ page }) => {
