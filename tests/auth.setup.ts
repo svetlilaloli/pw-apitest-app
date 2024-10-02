@@ -1,8 +1,8 @@
-import { test as setup } from '@playwright/test';
+import { test } from '@playwright/test';
 
 const authFile = '.auth/user.json'
 
-setup('authentication', async ({ page }) => {
+test('authentication', async ({ page }) => {
     await page.goto('https://conduit.bondaracademy.com')
     await page.getByText('Sign in').click()
     await page.getByRole('textbox', { name: 'Email' }).fill('svet@test.com')

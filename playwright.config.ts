@@ -38,6 +38,10 @@ export default defineConfig({
       name: 'setup',
       testMatch: 'auth.setup.ts'
     },
+    // {
+    //   name: 'apiTests',
+    //   testMatch: 'workingWithApi.spec.ts'
+    // },
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'], storageState: '.auth/user.json' },
