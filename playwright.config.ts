@@ -34,14 +34,11 @@ export default defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
+    // sharing authentication state, lecture 59
     {
       name: 'setup',
       testMatch: 'auth.setup.ts'
     },
-    // {
-    //   name: 'apiTests',
-    //   testMatch: 'workingWithApi.spec.ts'
-    // },
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'], storageState: '.auth/user.json' },
